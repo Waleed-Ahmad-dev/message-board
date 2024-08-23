@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="icon" href="/logo.jpeg" type="image/jpeg">
+<title><%= title %></title>
+</head>
+<body>
+    <h1 class="title"><%= title %></h1>
+
+    <button class="btn" onclick="window.location.href='/new'">New Message</button>
+
+    <ul class="message-contanier">
+        <% messages.forEach((message, index) => { %>
+            <li class="message">
+                <strong><%= message.user %></strong>: <%= message.text %> - <%= message.added.toDateString() %><br>
+                <button class="open-btn" onclick="window.location.href='/message/<%= index %>'">Open</button>
+            </li>
+            <% }) %>
+    </ul>
+</body>
+</html>

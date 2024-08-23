@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><%= title %></title>
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="icon" href="/logo.jpeg" type="image/jpeg">
+</head>
+<body>
+    <h1 class="title"><%= title %></h1>
+    
+    <p class="info"><strong>User:</strong> <%= message.user %></p>
+    <p class="info"><strong>Message:</strong> <%= message.text %></p>
+    <p class="info"><strong>Date:</strong> <%= message.added.toDateString() %></p>
+    
+    <p><a class="back-btn" href="/">Go back to the message board</a></p>
+</body>
+</html>
